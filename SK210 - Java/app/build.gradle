@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.sk210'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.sk210"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    flavorDimensions += "version"
+    productFlavors {
+        device1 {
+            dimension "version"
+            applicationId "com.example.sk210.device1"
+            versionName "1.0-device1"
+        }
+        device2 {
+            dimension "version"
+            applicationId "com.example.sk210.device2"
+            versionName "1.0-device2"
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation project(path: ':MSitef')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    //implementation(files("./libs/T1_V2_20230906.jar"))
+
+    //Scan
+    device1Implementation files("./libs/T1_V2_20230816.jar")
+    implementation files('libs/DecodeLibrary_1.8.03.A28.aar')
+
+    //Impressão
+    device2Implementation files("./libs/T1_V2_20230906.jar")
+
+
+    //Camera
+
+    implementation 'com.google.zxing:core:3.4.1'
+    implementation 'com.journeyapps:zxing-android-embedded:4.2.0'
+
+
+
+
+}

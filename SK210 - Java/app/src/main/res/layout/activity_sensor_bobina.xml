@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.sensor_bobina.SensorBobinaActivity">
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/redButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:cornerRadius="10dp"
+        android:text="Sensor Bobina"
+        android:layout_margin="16dp"
+
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>

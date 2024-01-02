@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="150dp"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Exemplo M-Sitef- Java"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/archivo_black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toStartOf="@+id/btnEnviarTransacao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="130dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Valor em R$"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtValorOperacao"
+        app:layout_constraintStart_toStartOf="@+id/radioGroupParcelamento"
+        app:layout_constraintTop_toBottomOf="@+id/btnReimpressao" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="153dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:text="IP Servidor\n(somente M-Sitef)"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnReimpressao"
+        app:layout_constraintTop_toBottomOf="@+id/btnReimpressao" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtValorOperacao"
+        android:layout_width="102dp"
+        android:layout_height="41dp"
+        android:inputType="numberDecimal|numberSigned"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/radioGroupParcelamento"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupParcelamento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:checkedButton="@id/rbCredito"
+        android:padding="12dp"
+     app:backgroundTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <TextView
+            android:id="@+id/cabeca"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Pagamento a ser utilizado"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <RadioButton
+            android:id="@+id/rbCredito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crédito"
+            android:textColor="@color/radioButtonTextColor"
+            android:backgroundTint="@color/radioButtonBackgroundColor" />
+
+
+        />
+
+        <RadioButton
+            android:id="@+id/rbDebito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Débito"
+            android:textColor="@color/radioButtonTextColor"
+            android:backgroundTint="@color/radioButtonBackgroundColor" />
+
+        />
+
+        <RadioButton
+            android:id="@+id/rbTodos"
+            android:layout_width="134dp"
+            android:layout_height="wrap_content"
+            android:text="Todos(M-Sitef)"
+            android:textColor="@color/radioButtonTextColor"
+            android:backgroundTint="@color/radioButtonBackgroundColor" />
+
+        />
+
+
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtIpServidor"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:digits="0123456789."
+        android:hint="172.18.20.117"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:text="172.18.20.117" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="176dp"
+        android:layout_height="142dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtIpServidor"
+        app:layout_constraintTop_toBottomOf="@+id/txtIpServidor">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Tipo de parcelamento"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioLoja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parcelado Loja"
+            android:textColor="@color/radioButtonTextColor"
+            android:backgroundTint="@color/radioButtonBackgroundColor" />
+
+        />
+
+        <RadioButton
+            android:id="@+id/radioAdm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parcelado Adm"
+            android:textColor="@color/radioButtonTextColor"
+            android:backgroundTint="@color/radioButtonBackgroundColor" />
+
+        />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Número de Parcelas"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupParcelamento" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtParcelas"
+        android:layout_width="306dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:hint="0"
+        android:inputType="number"
+        android:text="1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtParcelas">
+
+        <TextView
+            android:id="@+id/header1"
+            android:layout_width="129dp"
+            android:layout_height="29dp"
+            android:text="Escolha a API: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/rbGer7"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:text="Ger7"
+            android:textColor="@color/radioButtonTextColor"
+            android:backgroundTint="@color/radioButtonBackgroundColor" />
+
+        />
+
+        <RadioButton
+            android:id="@+id/rbMsitef"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:text="M-Sitef"
+            android:textColor="@color/radioButtonTextColor"
+            android:backgroundTint="@color/radioButtonBackgroundColor" />
+
+        />
+
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cbImpressao"
+        android:layout_width="247dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:text="Habilita Impressão"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEnviarTransacao"
+        android:layout_width="383dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shadow"
+        android:padding="8dp"
+        android:text="Enviar Transação"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCancelarTransacao"
+        android:layout_width="383dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shadow"
+        android:text="Cancelar Transação"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEnviarTransacao" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFuncoes"
+        android:layout_width="383dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shadow"
+        android:text="Funções"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCancelarTransacao" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReimpressao"
+        android:layout_width="383dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shadow"
+        android:text="Reimpressão"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFuncoes" />/>
+
+    <EditText
+        android:id="@+id/txtRetorno"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:autoText="false"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:duplicateParentState="false"
+        android:editable="false"
+        android:fadeScrollbars="true"
+        android:focusable="auto"
+        android:focusableInTouchMode="false"
+        android:inputType="textMultiLine|textImeMultiLine"
+        android:nestedScrollingEnabled="true"
+        android:scrollHorizontally="true"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtParcelas"
+        app:layout_constraintTop_toBottomOf="@+id/btnReimpressao" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
