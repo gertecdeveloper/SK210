@@ -79,6 +79,7 @@ public class TefActivity extends AppCompatActivity {
     MSitef mSitef;
     private Context mContext = TefActivity.this;
     volatile boolean mInPrinter = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -191,14 +192,15 @@ public class TefActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        try{
+        try {
             if (requestCode == MSitef.REQ_CODE_MSITEF && data != null) {
                 RetornoMSitef retornoSitef = mSitef.traduzRetornoMSitef(data);
-                if(resultCode == RESULT_OK){
+                if (resultCode == RESULT_OK) {
                     if (retornoSitef.getCodResp().equals("0")) {
                         String impressao = "";
                         // Verifica se tem algo pra imprimir
@@ -238,7 +240,7 @@ public class TefActivity extends AppCompatActivity {
                             mSitef.dialodTransacaoAprovadaMsitef(retornoSitef);
                         }
                     }
-                }else{
+                } else {
                     // ocorreu um erro
                     if (acao.equals("venda") || acao.equals("cancelamento")) {
                         mSitef.dialodTransacaoNegadaMsitef(retornoSitef);
@@ -268,7 +270,7 @@ public class TefActivity extends AppCompatActivity {
         txtValorOperacao.addTextChangedListener(new MoneyTextWatcher(txtValorOperacao));
     }
 
-    private void executaTEF(int operacao){
+    private void executaTEF(int operacao) {
 
         Bundle bundle = new Bundle();
 
@@ -281,7 +283,7 @@ public class TefActivity extends AppCompatActivity {
         bundle.putCharSequence("comExterna", "0"); // 0 – Sem (apenas para SiTef dedicado)
         bundle.putCharSequence("CNPJ_CPF", "03654119000176"); // CNPJ ou CPF do estabelecimento.
 
-        switch (operacao){
+        switch (operacao) {
             case VENDA:
 
                 bundle.putCharSequence("valor", "001");  // Valor da operação
@@ -350,6 +352,7 @@ public class TefActivity extends AppCompatActivity {
         alertDialog.show();
 
     }
+
     public Bitmap rotateBitmap(Bitmap original, float degrees) {
         Matrix matrix = new Matrix();
         matrix.preRotate(degrees);

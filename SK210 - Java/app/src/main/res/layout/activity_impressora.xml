@@ -63,6 +63,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnImprimirImagem" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnQr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#81D3CB"
+        android:padding="20dp"
+        android:text="Imprimir QR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnImprimirFrase" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBarCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#81D3CB"
+        android:padding="20dp"
+        android:text="Imprimir BarCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnQr" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
