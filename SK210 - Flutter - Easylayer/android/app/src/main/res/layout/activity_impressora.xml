@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:background="@color/white"
+    tools:context=".impressao.ImpressoraActivity">
+
+    <EditText
+        android:id="@+id/edt_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shape_list"
+        android:hint="  Digite o texto"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_print_text"
+        android:layout_width="match_parent"
+        android:theme="@style/Theme.MyTheme"
+        android:layout_height="61dp"
+        android:layout_marginTop="12dp"
+        android:textSize="@dimen/sizeBtn"
+        android:backgroundTint="@color/azulGertec"
+        android:text="@string/imprimir"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/edt_text"
+        tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/btn_print_cupom"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:textSize="@dimen/sizeBtn"
+        android:backgroundTint="@color/azulGertec"
+        android:text="@string/imprimir_cupom"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_print_text"
+        tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/btn_print_imagem"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:textSize="@dimen/sizeBtn"
+        android:backgroundTint="@color/azulGertec"
+        android:text="@string/imprimir_imagem"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_print_cupom"
+        tools:ignore="SpUsage" />
+
+
+    <Button
+        android:id="@+id/btn_print_html"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:backgroundTint="@color/azulGertec"
+        android:text="@string/imprimir_html"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        android:textSize="@dimen/sizeBtn"
+        app:layout_constraintTop_toBottomOf="@+id/btn_print_imagem"
+        tools:layout_editor_absoluteX="60dp"
+        tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/btn_print_barcode"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:textSize="@dimen/sizeBtn"
+        android:backgroundTint="@color/azulGertec"
+        android:text="@string/imprimir_barcode"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_print_html"
+        tools:ignore="MissingConstraints,SpUsage" />
+
+
+    <Button
+        android:id="@+id/btn_print_tabelas"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:backgroundTint="@color/azulGertec"
+        android:textSize="@dimen/sizeBtn"
+        android:text="@string/imprimir_tabelas"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_print_barcode"
+        tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/btn_print_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:backgroundTint="@color/azulGertec"
+        android:text="@string/soltar_papel"
+        android:textSize="@dimen/sizeBtn"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_print_tabelas"
+        tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/btn_print_cut"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:backgroundTint="@color/azulGertec"
+        android:text="@string/cortar_papel"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sizeBtn"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_print_scroll"
+        tools:ignore="SpUsage" />
+
+    <Switch
+        android:id="@+id/switchRotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/inverter_impressao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_print_cut"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

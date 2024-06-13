@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#014B68</color>
+    <color name="red">#FFFF0000</color>
+    <color name="colorPrimaryDark">#011C3F</color>
+    <color name="colorAccent">#3D7AEE</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#474646</color>
+
+    <color name="azulGertec">#001A45</color>
+    <color name="amereloGertec">#FCAF26</color>
+    <color name="green">#1C9500</color>
+
+    <color name="radioButtonTextColor">#000000</color>
+    <color name="radioButtonBackgroundColor">#FFFFFF</color>
+</resources>
