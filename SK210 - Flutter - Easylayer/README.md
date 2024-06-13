@@ -1,6 +1,6 @@
 # sk210flutter_easylayer
 
-A new Flutter project.
+Versão do SDK: flutter_windows_3.19.5-stable
 
 ## Getting Started
 
