@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">SK210</string>
+    <string name="informacoes">Click aqui para mais informações</string>
+    <string name="inverter_impressao">Inverter Impressão</string>
+    <string name="aproxime_o_cart_o_da_leitora">Aproxime o cartão da leitora.</string>
+
+    <string name="message_write_error">Erro ao gravar informação!</string>
+    <string name="message_write_success">Sucesso ao gravar informação!</string>
+    <string name="message_write_progress">Gravando informação..</string>
+    <string name="message_tag_detected">Cartão lido com sucesso!</string>
+    <string name="message_read_tag">Leitura do Cartão NFC</string>
+    <string name="message_read">Aproxime o cartão</string>
+    <string name="message_write_tag">Gravar Cartão</string>
+    <string name="message_write_read_tag">Gravar/Ler Cartão</string>
+    <string name="message_tap_tag">Toque na tag NFC no seu dispositivo!</string>
+    <string name="message_format_tag">Formatar Cartão</string>
+    <string name="gravar_no_cart_o">Gravar no Cartão</string>
+    <string name="ler_cart_o">Ler Cartão</string>
+    <string name="formatar_cart_o">Formatar Cartão</string>
+    <string name="teste_leitura_grava_o">Teste Leitura/Gravação</string>
+
+    <string name="bar_code_width">Largura</string>
+    <string name="bar_code_height">Altura</string>
+    <string name="fun_es_impressora_gs300">Funções Impressao GS300</string>
+    <string name="status_impressora">Status Impressora</string>
+    <string name="escreva_a_sua_mensagem">Escreva a sua mensagem</string>
+    <string name="configura_o_de_impress_o">Configuração de impressão</string>
+    <string name="esquerda">Esquerda</string>
+    <string name="centralizado">Centralizado</string>
+    <string name="direita">Direita</string>
+    <string name="negrito">Negrito</string>
+    <string name="it_lico">Itálico</string>
+    <string name="sublinhado">Sublinhado</string>
+    <string name="size">Size:</string>
+    <string name="imprimir">Imprimir Texto</string>
+    <string name="imprimir_imagem">Imprimir Imagem</string>
+    <string name="barcodes">BarCodes</string>
+    <string name="imprimir_barcode">Imprimir BarCode</string>
+    <string name="soltar_papel">Soltar papel</string>
+    <string name="imprimir_tabelas">Imprimir Tabelas</string>
+    <string name="cortar_papel">Cortar papel</string>
+    <string name="imprimir_todasasfuncoes">Imprimir Todas Funções</string>
+    <string name="font">Font:</string>
+    <string name="imprimir_cupom">Imprimir Cupom</string>
+    <string name="imprimir_html">Imprimir HTML</string>
+    <string name="codigo_de_barras">Código de Barras</string>
+    <string name="status">Status</string>
+    <string name="name_printer_connected">GS300</string>
+    <string name="digite_o_texto">  Digite o Texto</string>
+    <string name="texto_em_negrito">Texto em negrito</string>
+    <string name="texto_sublinhado">Texto sublinhado</string>
+    <string name="alinhar_texto_a_esquerda">Alinhar Texto a esquerda</string>
+    <string name="alinhar_texto_ao_centro">Alinhar Texto ao centro</string>
+    <string name="alinhar_texto_a_direita">Alinhar Texto a direita</string>
+    <string name="imprimir_codigo_de_barras">imprimir código de barras</string>
+
+    <string-array name="Tamanhos">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="Widths">
+        <item>40</item>
+        <item>80</item>
+        <item>120</item>
+        <item>160</item>
+        <item>200</item>
+        <item>240</item>
+        <item>255</item>
+    </string-array>
+
+
+    <string-array name="Qrsize">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+    <string-array name="errorQRCode">
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+    </string-array>
+
+    <string-array name="BarCodes">
+        <item>CODE_128</item>
+        <item>EAN_8</item>
+        <item>EAN_13</item>
+        <item>PDF_417</item>
+        <item>QR_CODE</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dialog">dialog</string>
+
+
+    <style name="TextAppearance.AppCompat.Body1" parent="Base.TextAppearance.AppCompat.Body1" />
+
+    <style name="Theme.MyTheme" parent="Theme.AppCompat.Light">
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/amereloGertec</item>
+
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/amereloGertec</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorAccent">@color/amereloGertec</item>
+    </style>
+
+</resources>

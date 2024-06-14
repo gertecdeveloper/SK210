@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/widgetLayout"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".FragmentWidget">
+
+    <TextView
+        android:id="@+id/informacoes"
+        android:layout_width="284dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="Informações"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/equipamento"
+        android:layout_width="285dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"
+        android:text="Equipamento: SK210"
+        android:textAlignment="textStart"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/lib"
+        android:layout_width="285dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Easy Layer: 2.1.7"
+        android:textAlignment="textStart"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/linguagem"
+        android:layout_width="285dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Linguagem: Java"
+        android:textAlignment="textStart"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/appversion"
+        android:layout_width="285dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginTop="3dp"
+        android:text="Versão do app: 1.0.0"
+        android:textAlignment="textStart"
+        android:textSize="15dp" />
+
+
+</LinearLayout>

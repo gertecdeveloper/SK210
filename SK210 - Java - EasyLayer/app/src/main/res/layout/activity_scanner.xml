@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Scanner.Scanner">
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="360dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/azulGertec"
+        android:text="Start"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sizeBtn"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listScanner"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="360dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/azulGertec"
+        android:text="Stop"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStart"
+        tools:ignore="HardcodedText"
+        android:textSize="@dimen/sizeBtn">
+
+
+    </Button>
+
+
+    <ListView
+        android:id="@+id/listScanner"
+        android:layout_width="360dp"
+        android:layout_height="304dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/shape_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:text="Ler Códgido de Barras"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,SpUsage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
