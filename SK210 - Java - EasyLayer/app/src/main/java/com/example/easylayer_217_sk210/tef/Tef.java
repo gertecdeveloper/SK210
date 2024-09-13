@@ -21,9 +21,6 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.easylayer_217_sk210.R;
 import com.topwise.cloudpos.aidl.printer.AidlPrinter;

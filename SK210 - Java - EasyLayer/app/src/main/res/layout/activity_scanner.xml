@@ -38,10 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnStart"
         tools:ignore="HardcodedText"
-        android:textSize="@dimen/sizeBtn">
-
-
-    </Button>
+        android:textSize="@dimen/sizeBtn"/>
 
 
     <ListView

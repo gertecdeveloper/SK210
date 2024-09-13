@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".scanner.Scanner">
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:fontFamily="@font/outfitbold"
+            android:background="@drawable/shadow"
+            android:textColor="@color/white"
+            android:padding="8dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:fontFamily="@font/outfitbold"
+            android:background="@drawable/shadow"
+            android:textColor="@color/white"
+            android:layout_marginLeft="16dp"
+            android:padding="8dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/clear_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:fontFamily="@font/outfitbold"
+            android:background="@drawable/shadow"
+            android:textColor="@color/white"
+            android:layout_marginLeft="16dp"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/barcode_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/button_layout"
+        android:layout_marginTop="16dp"
+        android:background="#D3D3D3"
+        android:padding="10dp" />
+
+</RelativeLayout>

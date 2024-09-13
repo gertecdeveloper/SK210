@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sensor.SensorActivity">
+
+    <TextView
+        android:id="@+id/sensorStatusTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sensor Status"
+        android:layout_above="@+id/sensorListView"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp" />
+
+    <ListView
+        android:id="@+id/sensorListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/startButton"
+        android:layout_marginBottom="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar"
+        android:background="@drawable/shadow"
+        android:textColor="@color/white"
+        android:fontFamily="@font/outfitbold"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/stopButton"
+        android:layout_marginRight="16dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parar"
+        android:fontFamily="@font/outfitbold"
+        android:background="@drawable/shadow"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

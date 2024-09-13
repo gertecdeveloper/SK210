@@ -33,10 +33,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ImpressoraActivity extends AppCompatActivity {
-    private Button buttonText,buttonImage,buttonFrase, buttonQr, buttonBarCode;
+    private Button buttonText, buttonImage, buttonFrase, buttonQr, buttonBarCode;
     private EditText editText;
     private Context mContext = ImpressoraActivity.this;
     volatile boolean mInPrinter = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,16 +62,16 @@ public class ImpressoraActivity extends AppCompatActivity {
             }
         });
 
-    buttonImage.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            imprimirImagem(BitmapFactory.decodeResource(getResources(), R.drawable.park));
-        }
-    });
+        buttonImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imprimirImagem(BitmapFactory.decodeResource(getResources(), R.drawable.park));
+            }
+        });
         buttonFrase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               imprimirFrase();
+                imprimirFrase();
             }
         });
 
@@ -88,6 +89,7 @@ public class ImpressoraActivity extends AppCompatActivity {
             }
         });
     }
+
     public void imprimirTexto(String texto) {
         try {
             String startTime = getCurTime();
@@ -205,7 +207,7 @@ public class ImpressoraActivity extends AppCompatActivity {
         }
     }
 
-    public void imprimirQr(){
+    public void imprimirQr() {
         try {
             PrintTemplate template = PrintTemplate.getInstance();
             template.init(mContext);

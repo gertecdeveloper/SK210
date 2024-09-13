@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        app:srcCompat="@drawable/gertec" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/infor"
+        android:layout_width="354dp"
+        android:layout_height="33dp"
+        android:layout_below="@id/imgLogo"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="10dp"
+        android:background="#00FFFFFF"
+        android:gravity="center"
+        android:text="@string/informacoes"
+        android:textColor="@color/azul"
+        android:textSize="10sp"
+        android:fontFamily="@font/outfitbold"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:background="@color/amarelo"
+        android:layout_below="@id/infor"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/infor"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCamera"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/infor"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/blue_bt"
+                android:drawableStart="@drawable/ic_camera"
+                android:text="Câmera"
+                android:fontFamily="@font/outfitbold"
+                android:textSize="20sp"
+                android:textColor="@color/azul2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnScanner"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/btn1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/blue_bt"
+                android:text="Scanner"
+                android:fontFamily="@font/outfitbold"
+                android:textSize="20sp"
+                android:textColor="@color/azul2"
+                android:drawableStart="@drawable/ic_scanner"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/btnPrinter"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/txtNameProject"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/blue_bt"
+                android:text="Impressão"
+                android:fontFamily="@font/outfitbold"
+                android:textSize="20sp"
+                android:textColor="@color/azul2"
+                android:drawableStart="@drawable/ic_print"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/btnSensorPresenca"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/btn1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/blue_bt"
+                android:text="Sensor de Presença"
+                android:fontFamily="@font/outfitbold"
+                android:textSize="20sp"
+                android:textColor="@color/azul2"
+                android:drawableStart="@drawable/ic_sensors"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/btnSensorBobina"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/txtNameProject"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/blue_bt"
+                android:text="Sensor de Bobina"
+                android:fontFamily="@font/outfitbold"
+                android:textSize="20sp"
+                android:textColor="@color/azul2"
+                android:drawableStart="@drawable/ic_sensor_bobina"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/btnTef"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/btn1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/blue_bt"
+                android:text="Tef"
+                android:fontFamily="@font/outfitbold"
+                android:textSize="20sp"
+                android:textColor="@color/azul2"
+                android:drawableStart="@drawable/ic_tef"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
