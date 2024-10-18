@@ -130,12 +130,12 @@ public class LeitorScann extends Activity implements View.OnClickListener {
     private void handleDecode(String result) {
         if (result != null) {
             // Removendo os asteriscos e outros caracteres especiais do código de barras
-            String cleanedResult = result.replaceAll("[^\\d]", "");
+//            String cleanedResult = result.replaceAll("[^\\d]", "");
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     // Exibindo apenas o número do código de barras na tela
-                    barcodeList.add(cleanedResult);
+                    barcodeList.add(result);
                     barcodeAdapter.notifyDataSetChanged();
                 }
             });

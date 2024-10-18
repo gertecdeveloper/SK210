@@ -122,9 +122,9 @@ class Scanner : Activity(), View.OnClickListener {
             mDecodeManager?.playDecodeSucLight()
 
             // Removendo caracteres especiais do código de barras
-            val cleanedResult = result.replace("[^\\d]".toRegex(), "")
+//            val cleanedResult = result.replace("[^\\d]".toRegex(), "")
             runOnUiThread {
-                barcodeList.add(cleanedResult)
+                barcodeList.add(result)
                 barcodeAdapter.notifyDataSetChanged()
             }
 
