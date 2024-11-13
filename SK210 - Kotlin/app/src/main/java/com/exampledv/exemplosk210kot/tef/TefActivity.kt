@@ -16,6 +16,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.exampledv.exemplosk210kot.R
 import com.exampledv.exemplosk210kot.util.DeviceServiceManager
+
 import com.topwise.cloudpos.aidl.printer.AidlPrinterListener
 import com.topwise.cloudpos.aidl.printer.Align
 import com.topwise.cloudpos.aidl.printer.PrintCuttingMode
@@ -62,6 +63,7 @@ class TefActivity : AppCompatActivity() {
 
     private lateinit var mSitef: MSitef
     private val mContext: Context = this
+
     @Volatile
     private var mInPrinter = false
 
@@ -178,6 +180,7 @@ class TefActivity : AppCompatActivity() {
                         var impressao: String? = ""
                         // Verifica se tem algo pra imprimir
                         if (!retornoSitef.textoImpressoCliente().isEmpty()) {
+                            impressao += "\n\n-----------------------------     \n"
                             impressao += retornoSitef.textoImpressoCliente()
                         }
                         if (!retornoSitef.textoImpressoEstabelecimento().isEmpty()) {
@@ -192,7 +195,7 @@ class TefActivity : AppCompatActivity() {
                         template.add(
                             TextUnit(
                                 impressao,
-                                60,
+                                20,
                                 Align.CENTER
                             )
                         ) // Adiciona o texto ao template
@@ -202,6 +205,7 @@ class TefActivity : AppCompatActivity() {
                                 180f
                             ), 0
                         )
+
                         DeviceServiceManager.getInstance().printManager.printRuiQueue(object :
                             AidlPrinterListener.Stub() {
                             @Throws(RemoteException::class)
