@@ -59,7 +59,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/blue_bt"
                 android:drawableStart="@drawable/ic_camera"
-                android:text="Câmera"
+                android:text="Scanner via câmera"
                 android:fontFamily="@font/outfitbold"
                 android:textSize="20sp"
                 android:textColor="@color/azul2" />

@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         txtProject.setText("Android Studio "+ version+" - SK210");
 
-        projetos.add(new Constants("Câmera", R.drawable.ic_camera));
+        projetos.add(new Constants("Scanner via camera", R.drawable.ic_camera));
         projetos.add(new Constants("Scanner",R.drawable.ic_scanner));
         projetos.add(new Constants("Impressão",R.drawable.ic_print));
         projetos.add(new Constants("Tef",R.drawable.ic_tef));
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = null;
                 switch (constants.getNome()){
-                    case "Câmera":
+                    case "Scanner via câmera":
                         intent = new Intent(MainActivity.this, CameraActivity.class);
                         break;
                     case "Scanner":
