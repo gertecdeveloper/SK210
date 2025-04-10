@@ -1,0 +1,12 @@
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#4CAF50</color>
+    <color name="amarelo">#ffd30b</color>
+    <color name="red">#FF0000</color>
+    <color name="azul">#123063</color>
+    <color name="azul2">#0a1f3d</color>
+
+    <color name="my_light_primary">#ffd30b</color>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FullScreenWebView" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Cor principal da marca -->
+        <item name="colorPrimary">@color/purple_500</item>
+
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Cor secundária da marca -->
+
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Personalize seu tema aqui -->
+    </style>
+
+    <style name="Theme.AppCompat.NoActionBar.FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>
+
+

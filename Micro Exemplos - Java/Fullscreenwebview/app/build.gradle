@@ -1,0 +1,60 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+}
+
+android {
+    namespace 'com.exampledv.fullscreenwebview'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.exampledv.fullscreenwebview"
+        minSdk 27
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('AndroidDefaultDev_Enhanced.jks')
+            storePassword 'GertecDefaultNDevelopmentKeyStore'
+            keyAlias 'androidenhanceddev'
+            keyPassword 'Gertec'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+
+        debug {
+            jniDebuggable true
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    implementation files('libs/libgedi-0.16.20-gpos720-payment-release.aar')
+    implementation files('libs/android-easy-layer-debug_gpos720.aar')
+}
